@@ -1,0 +1,55 @@
+{
+    "name": "lavalite/cms",
+    "description": "Multilingual CMS based on Laravel 4 & Bootstrap 3",
+    "keywords": ["lavalite", "framework", "cms", "laravel"],
+    "license": "MIT",
+    "require": {
+        "laravel/framework": "4.2.*",
+        "cartalyst/sentry": "dev-master",
+        "anahkiasen/former": "dev-master",
+        "teepluss/theme": "1.*",
+        "intervention/imagecache": "dev-master",
+        "mcamara/laravel-localization": "0.14.*",
+        "dimsav/laravel-translatable": "4.2.*",
+        "greggilbert/recaptcha": "1.*",
+        "loic-sharma/profiler": "1.1.*",
+
+        "lavalite/user": "2.2.*",
+        "lavalite/page": "2.2.*",
+        "lavalite/contact": "2.2.*",
+        "lavalite/menu": "2.2.*",
+        "lavalite/filer": "2.2.*",
+        "lavalite/image": "2.2.*"
+
+    },
+
+    "autoload": {
+        "classmap": [
+            "app/commands",
+            "app/controllers",
+            "app/models",
+            "app/database/migrations",
+            "app/database/seeds",
+            "app/tests/TestCase.php"
+        ]
+    },
+
+    "scripts": {
+        "post-install-cmd": [
+            "php artisan optimize"
+        ],
+        "pre-update-cmd": [
+            "php artisan clear-compiled"
+        ],
+        "post-update-cmd": [
+            "php artisan optimize"
+        ],
+        "post-create-project-cmd": [
+            "php artisan key:generate"
+        ]
+    },
+    "config": {
+        "preferred-install": "dist"
+    },
+    "minimum-stability": "dev"
+}

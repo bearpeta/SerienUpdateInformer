@@ -1,0 +1,13 @@
+/bootstrap/compiled.php
+/vendor
+/workbench
+/public/vendor
+/public/packages
+/public/themes/admin-lavalite
+/public/themes/public-lavalite
+composer.phar
+composer.lock
+.DS_Store
+._**
+*.tmp
+*.zip
